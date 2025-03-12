@@ -3,10 +3,10 @@ import { useState } from "react";
 const Cards = (props)=>{
   const data =Array.from(props.data);
   const [currentPage, setCurrentpage] = useState(1);
-  const [itemsPerpage, setItemsperpage] = useState(20);
   const lastItemIndex = currentPage * itemsPerpage;
   const firstItemIndex = lastItemIndex - itemsPerpage;
   const thisPageItems = data.slice(firstItemIndex, lastItemIndex);
+  const itemsPerpage = 20;
 
   const pages = [];
   for(let i=1; i < data.length/itemsPerpage; i++){
