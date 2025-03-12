@@ -10,7 +10,7 @@ const Newsapp = ()=>{
   const [dataLoading, setDataloading] = useState(true);
   
   useEffect(() =>{
-    fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&apikey=${API_KEY}`)
+    fetch(`http://newsapi.org/v2/everything?q=${searchTerm}&apikey=${API_KEY}`)
       .then(res =>{
         if(!res.ok){
           throw Error('Could not fetch the data');
